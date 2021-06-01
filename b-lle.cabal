@@ -1,0 +1,68 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 5dfa3826d9bb03bbb670e5c3fa8e15aaa626243255ab1909d82c92d613dfca01
+
+name:           b-lle
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/b-lle#readme>
+homepage:       https://github.com/githubuser/b-lle#readme
+bug-reports:    https://github.com/githubuser/b-lle/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/b-lle
+
+library
+  exposed-modules:
+      Lib
+      LLE.Advertising
+      Types.Advertising
+  other-modules:
+      Paths_b_lle
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+  default-language: Haskell2010
+
+executable b-lle-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_b_lle
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      b-lle
+    , base >=4.7 && <5
+    , bytestring
+  default-language: Haskell2010
+
+test-suite b-lle-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_b_lle
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      b-lle
+    , base >=4.7 && <5
+    , bytestring
+    , hspec
+  default-language: Haskell2010
