@@ -1,5 +1,7 @@
+{-# LANGUAGE DuplicateRecordFields #-}
 module Types.L2CAP where
 
+import Data.Int
 
 data ChannelIdentifier
   = Null
@@ -40,6 +42,7 @@ data Payload
       , psm :: Int16
       }
 
+-- Signalling Commands
 data SignallingPayload
   = CommandReject
       { reason :: Int16
@@ -47,3 +50,16 @@ data SignallingPayload
       , length :: Int16
       }
 
+data Options a = Options
+  { _type :: Int8
+  , length :: Int8
+  , _data :: a
+  }
+
+-- _type = 0x01
+-- length = 2 bytes (hence it's Options Int16)
+type MTUOption = Options Int16
+
+-- _type = 0x02
+-- length = 2 bytes (hence it's Options Int16)
+type FlushTimeoutOption = Options Int16

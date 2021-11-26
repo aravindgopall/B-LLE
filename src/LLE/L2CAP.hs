@@ -16,6 +16,6 @@ toChannelIdentifier val
 -- given channel type
 findCID :: ChannelType -> (ChannelIdentifier, ChannelIdentifier)
 findCID Connection = (Dynamic, Dynamic)
-findCID ConnectionLess = (Dynamic, 0x0002)
-findCID Signal = (0x0001, 0x0001)
+findCID ConnectionLess = (Dynamic, toChannelIdentifier 0x0002)
+findCID Signal = (toChannelIdentifier 0x0001, toChannelIdentifier 0x0001)
 
