@@ -5,10 +5,7 @@ module LLE.Advertising where
 import Data.Bits
 import Data.Word
 import Types.Advertising
-
-setIf :: Word8 -> Word16 -> Int -> Word16
-setIf 1 w16 pos = setBit w16 pos
-setIf _ w16 _ = w16
+import LLE.Utils
 
 -- | Convert to Word16 of the Advertising Header.
 -- ---------------------------------------------------------------------------------------------------
