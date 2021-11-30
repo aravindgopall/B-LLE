@@ -10,14 +10,14 @@ data DataPayload = DataPayload
   }
 
 data DataHeader = DataHeader
-  { llid :: Word16 -- ^ 2 bits
+  { llid :: Word32 -- ^ 2 bits
   , nsen :: Word8 -- ^ 1 bit
   , sn :: Word8 -- ^ 1 bit
   , md :: Word8 -- ^ 1 bit
   , cp :: Word8 -- ^ 1 bit
-  , rfu :: Word16 -- ^ 2 bits
-  , length :: Word16 -- ^ 8 bits
-  , cteInfo :: Maybe Word8 -- ^ 8 bits
+  , rfu :: Word32 -- ^ 2 bits
+  , length :: Word32 -- ^ 8 bits
+  , cteInfo :: Maybe Word32 -- ^ 8 bits
   }
 
 data ControlPDU = ControlPDU
