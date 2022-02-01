@@ -2,7 +2,7 @@ module LLE.L2CAP where
 
 import Types.L2CAP
 
--- Convert the  value to corresponding channel identifier.
+-- | Convert the  value to corresponding channel identifier.
 toChannelIdentifier :: Int -> ChannelIdentifier
 toChannelIdentifier val
   | val == 0x0000 = Null
