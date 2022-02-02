@@ -1,6 +1,4 @@
-module Types.Advertising where
-
-import Types.Advertising (L2CAPEvent (L2CA_ConfigReq))
+module Types.Event where
 
 -- | L2CAP Events
 data L2CAPEvent
