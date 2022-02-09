@@ -2,7 +2,7 @@ module LLE.L2CAP where
 
 import Types.L2CAP
 
--- Convert the given value to corresponding channel identifier.
+-- | Convert the  value to corresponding channel identifier.
 toChannelIdentifier :: Int -> ChannelIdentifier
 toChannelIdentifier val
   | val == 0x0000 = Null
@@ -12,10 +12,8 @@ toChannelIdentifier val
   | val < 0xffff = Dynamic
   | otherwise = error "unknown channel identifier"
 
--- Return the local and remote Channel identifier for the
--- given channel type
+-- | Returns the local and remote Channel identifier for the given channel type
 findCID :: ChannelType -> (ChannelIdentifier, ChannelIdentifier)
 findCID Connection = (Dynamic, Dynamic)
 findCID ConnectionLess = (Dynamic, toChannelIdentifier 0x0002)
 findCID Signal = (toChannelIdentifier 0x0001, toChannelIdentifier 0x0001)
-

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6bd1f6f08327f986f65c04888797c84853a8fbef0253cbf7e2a50c659c99939a
+-- hash: c89580552615d19b7202cc8d83d5a71afd825386d32ef3c221c363914f47d4c0
 
 name:           b-lle
 version:        0.1.0.0
@@ -34,7 +34,9 @@ library
       LLE.Utils
       Types.Advertising
       Types.Data
+      Types.Event
       Types.L2CAP
+      Types.Signal
   other-modules:
       Paths_b_lle
   hs-source-dirs:
